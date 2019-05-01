@@ -1,0 +1,13 @@
+os:
+  - linux
+services:
+  - docker
+install:
+  - docker build -t coolybot/coolybot-registry:travis .
+  - docker images
+  - docker run --name coolybot-registry -p 8761:8761 -d -t coolybot/coolybot-registry:travis
+script:
+  - sleep 45
+  - docker ps
+  - docker logs coolybot-registry
+  - curl -v http://localhost:8761
