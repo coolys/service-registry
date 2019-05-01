@@ -4,7 +4,7 @@ import { NgModule, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Ng2Webstorage, LocalStorageService, SessionStorageService } from 'ngx-webstorage';
-import { JhiEventManager } from 'ng-coolybot';
+import { ClbEventManager } from 'ng-coolybot';
 
 import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
 import { AuthExpiredInterceptor } from './blocks/interceptor/auth-expired.interceptor';
@@ -18,7 +18,7 @@ import { CoolybotRegistryModule } from './registry/registry.module';
 
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
 
-import { JhiMainComponent, NavbarComponent, FooterComponent, ProfileService, PageRibbonComponent, ErrorComponent } from './layouts';
+import { ClbMainComponent, NavbarComponent, FooterComponent, ProfileService, PageRibbonComponent, ErrorComponent } from './layouts';
 
 @NgModule({
     imports: [
@@ -30,7 +30,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, ProfileService, Pag
         CoolybotRegistryAdminModule,
         CoolybotRegistryModule
     ],
-    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
+    declarations: [ClbMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
     providers: [
         ProfileService,
         PaginationConfig,
@@ -51,7 +51,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, ProfileService, Pag
             provide: HTTP_INTERCEPTORS,
             useClass: ErrorHandlerInterceptor,
             multi: true,
-            deps: [JhiEventManager]
+            deps: [ClbEventManager]
         },
         {
             provide: HTTP_INTERCEPTORS,
@@ -60,6 +60,6 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, ProfileService, Pag
             deps: [Injector]
         }
     ],
-    bootstrap: [JhiMainComponent]
+    bootstrap: [ClbMainComponent]
 })
 export class CoolybotRegistryAppModule {}

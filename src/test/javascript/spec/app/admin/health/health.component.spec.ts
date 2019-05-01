@@ -1,32 +1,32 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
 import { CoolybotRegistryTestModule } from '../../../test.module';
-import { JhiHealthCheckComponent } from 'app/admin/health/health.component';
-import { JhiHealthService } from 'app/admin/health/health.service';
-import { JhiRoutesService } from 'app/shared/routes/routes.service';
+import { ClbHealthCheckComponent } from 'app/admin/health/health.component';
+import { ClbHealthService } from 'app/admin/health/health.service';
+import { ClbRoutesService } from 'app/shared/routes/routes.service';
 
 describe('Component Tests', () => {
-    describe('JhiHealthCheckComponent', () => {
-        let comp: JhiHealthCheckComponent;
-        let fixture: ComponentFixture<JhiHealthCheckComponent>;
-        let service: JhiHealthService;
+    describe('ClbHealthCheckComponent', () => {
+        let comp: ClbHealthCheckComponent;
+        let fixture: ComponentFixture<ClbHealthCheckComponent>;
+        let service: ClbHealthService;
 
         beforeEach(
             async(() => {
                 TestBed.configureTestingModule({
                     imports: [CoolybotRegistryTestModule],
-                    declarations: [JhiHealthCheckComponent],
-                    providers: [JhiHealthService, JhiRoutesService]
+                    declarations: [ClbHealthCheckComponent],
+                    providers: [ClbHealthService, ClbRoutesService]
                 })
-                    .overrideTemplate(JhiHealthCheckComponent, '')
+                    .overrideTemplate(ClbHealthCheckComponent, '')
                     .compileComponents();
             })
         );
 
         beforeEach(() => {
-            fixture = TestBed.createComponent(JhiHealthCheckComponent);
+            fixture = TestBed.createComponent(ClbHealthCheckComponent);
             comp = fixture.componentInstance;
-            service = fixture.debugElement.injector.get(JhiHealthService);
+            service = fixture.debugElement.injector.get(ClbHealthService);
             fixture.detectChanges();
         });
 

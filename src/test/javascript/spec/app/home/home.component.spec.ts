@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angular/core/testing';
 import { Observable } from 'rxjs';
-import { JhiEventManager } from 'ng-coolybot';
+import { ClbEventManager } from 'ng-coolybot';
 
 import { CoolybotRegistryTestModule } from '../../test.module';
 import { EurekaStatusService, HomeComponent } from '../../../../../main/webapp/app/home';
 import { Account, AccountService, Principal, LoginModalService } from '../../../../../main/webapp/app/shared';
-import { JhiApplicationsService } from '../../../../../main/webapp/app/registry';
-import { JhiHealthService } from '../../../../../main/webapp/app/admin/health/health.service';
+import { ClbApplicationsService } from '../../../../../main/webapp/app/registry';
+import { ClbHealthService } from '../../../../../main/webapp/app/admin/health/health.service';
 
 describe('Component Tests', () => {
     describe('HomeComponent', () => {
@@ -23,7 +23,7 @@ describe('Component Tests', () => {
                     providers: [
                         Principal,
                         AccountService,
-                        JhiEventManager,
+                        ClbEventManager,
                         {
                             provide: LoginModalService,
                             useValue: {
@@ -31,8 +31,8 @@ describe('Component Tests', () => {
                             }
                         },
                         EurekaStatusService,
-                        JhiApplicationsService,
-                        JhiHealthService
+                        ClbApplicationsService,
+                        ClbHealthService
                     ]
                 })
                     .overrideTemplate(HomeComponent, '')
@@ -74,7 +74,7 @@ describe('Component Tests', () => {
         it(
             'populate Dashboard with Applications data',
             fakeAsync(
-                inject([JhiApplicationsService], (service: JhiApplicationsService) => {
+                inject([ClbApplicationsService], (service: ClbApplicationsService) => {
                     spyOn(service, 'findAll').and.returnValue(
                         Observable.of({
                             status: null,

@@ -1,11 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager } from 'ng-coolybot';
+import { ClbEventManager } from 'ng-coolybot';
 
 import { Account, LoginModalService, Principal } from 'app/shared';
-import { JhiHealthService } from 'app/admin';
-import { JhiApplicationsService } from 'app/registry';
-import { JhiRefreshService } from '../shared/refresh/refresh.service';
+import { ClbHealthService } from 'app/admin';
+import { ClbApplicationsService } from 'app/registry';
+import { ClbRefreshService } from '../shared/refresh/refresh.service';
 import { Subscription } from 'rxjs/Subscription';
 
 import { VERSION } from 'app/app.constants';
@@ -33,12 +33,12 @@ export class HomeComponent implements OnInit, OnDestroy {
         private principal: Principal,
         private loginModalService: LoginModalService,
         private loginOAuth2Service: LoginOAuth2Service,
-        private eventManager: JhiEventManager,
+        private eventManager: ClbEventManager,
         private eurekaStatusService: EurekaStatusService,
-        private applicationsService: JhiApplicationsService,
-        private healthService: JhiHealthService,
+        private applicationsService: ClbApplicationsService,
+        private healthService: ClbHealthService,
         private profileService: ProfileService,
-        private refreshService: JhiRefreshService
+        private refreshService: ClbRefreshService
     ) {
         this.version = VERSION ? 'v' + VERSION : '';
         this.appInstances = [];

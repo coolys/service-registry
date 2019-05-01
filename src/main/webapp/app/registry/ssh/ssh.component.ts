@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { JhiSSHService } from './ssh.service';
+import { ClbSSHService } from './ssh.service';
 
 @Component({
     selector: 'clb-applications',
     templateUrl: './ssh.component.html'
 })
-export class JhiSSHComponent implements OnInit {
+export class ClbSSHComponent implements OnInit {
     data: any;
     showMore: boolean;
 
-    constructor(private sshService: JhiSSHService) {
+    constructor(private sshService: ClbSSHService) {
         this.showMore = true;
     }
 

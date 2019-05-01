@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { Route } from 'app/shared';
 
 @Injectable()
-export class JhiConfigurationService {
+export class ClbConfigurationService {
     constructor(private http: HttpClient) {}
 
     getConfigs(prefix: String = ''): Observable<any> {

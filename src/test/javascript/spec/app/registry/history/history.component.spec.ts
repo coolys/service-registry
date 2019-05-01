@@ -2,27 +2,27 @@ import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angu
 import { Observable } from 'rxjs';
 
 import { CoolybotRegistryTestModule } from '../../../test.module';
-import { JhiHistoryComponent, JhiHistoryService } from '../../../../../../main/webapp/app/registry';
+import { ClbHistoryComponent, ClbHistoryService } from '../../../../../../main/webapp/app/registry';
 
 describe('Component Tests', () => {
     describe('HistoryComponent', () => {
-        let comp: JhiHistoryComponent;
-        let fixture: ComponentFixture<JhiHistoryComponent>;
+        let comp: ClbHistoryComponent;
+        let fixture: ComponentFixture<ClbHistoryComponent>;
 
         beforeEach(
             async(() => {
                 TestBed.configureTestingModule({
                     imports: [CoolybotRegistryTestModule],
-                    declarations: [JhiHistoryComponent],
-                    providers: [JhiHistoryService]
+                    declarations: [ClbHistoryComponent],
+                    providers: [ClbHistoryService]
                 })
-                    .overrideTemplate(JhiHistoryComponent, '')
+                    .overrideTemplate(ClbHistoryComponent, '')
                     .compileComponents();
             })
         );
 
         beforeEach(() => {
-            fixture = TestBed.createComponent(JhiHistoryComponent);
+            fixture = TestBed.createComponent(ClbHistoryComponent);
             comp = fixture.componentInstance;
             fixture.detectChanges();
         });
@@ -30,7 +30,7 @@ describe('Component Tests', () => {
         it(
             'refresh data',
             fakeAsync(
-                inject([JhiHistoryService], (service: JhiHistoryService) => {
+                inject([ClbHistoryService], (service: ClbHistoryService) => {
                     const response = {
                         canceled: {
                             '11052017': 'instance1'
@@ -53,7 +53,7 @@ describe('Component Tests', () => {
         it(
             'activate registered tab',
             fakeAsync(
-                inject([JhiHistoryService], (service: JhiHistoryService) => {
+                inject([ClbHistoryService], (service: ClbHistoryService) => {
                     const response = {
                         canceled: {
                             '11052017': 'instance1'

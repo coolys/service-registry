@@ -1,15 +1,15 @@
 import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
-import { JhiLogfileService } from './logfile.service';
+import { ClbLogfileService } from './logfile.service';
 
-import { JhiRoutesService, Route } from 'app/shared';
+import { ClbRoutesService, Route } from 'app/shared';
 
 @Component({
     selector: 'clb-logfile',
     templateUrl: './logfile.component.html',
     styleUrls: ['logfile.scss']
 })
-export class JhiLogfileComponent implements OnInit, OnDestroy {
+export class ClbLogfileComponent implements OnInit, OnDestroy {
     activeRoute: Route;
     updatingLogfile: boolean;
     logtxt: string;
@@ -17,7 +17,7 @@ export class JhiLogfileComponent implements OnInit, OnDestroy {
 
     @ViewChild('logfile') private logFileViewer: ElementRef;
 
-    constructor(private clbLogfileService: JhiLogfileService, private routesService: JhiRoutesService) {}
+    constructor(private clbLogfileService: ClbLogfileService, private routesService: ClbRoutesService) {}
 
     ngOnInit() {
         this.subscription = this.routesService.routeChanged$.subscribe((route) => {

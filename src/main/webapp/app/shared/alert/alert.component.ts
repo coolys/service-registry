@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { JhiAlertService } from 'ng-coolybot';
+import { ClbAlertService } from 'ng-coolybot';
 
 @Component({
     selector: 'clb-alert',
@@ -10,10 +10,10 @@ import { JhiAlertService } from 'ng-coolybot';
             </div>
         </div>`
 })
-export class JhiAlertComponent implements OnInit, OnDestroy {
+export class ClbAlertComponent implements OnInit, OnDestroy {
     alerts: any[];
 
-    constructor(private alertService: JhiAlertService) {}
+    constructor(private alertService: ClbAlertService) {}
 
     ngOnInit() {
         this.alerts = this.alertService.get();

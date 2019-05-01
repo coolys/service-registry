@@ -5,32 +5,32 @@ import { CommonModule } from '@angular/common';
 
 import {
     registryState,
-    JhiApplicationsComponent,
-    JhiConfigComponent,
-    JhiEncryptionComponent,
-    JhiHistoryComponent,
-    JhiReplicasComponent,
-    JhiSSHComponent,
-    JhiApplicationsService,
-    JhiConfigService,
-    JhiEncryptionService,
-    JhiHistoryService,
-    JhiReplicasService,
-    JhiSSHService
+    ClbApplicationsComponent,
+    ClbConfigComponent,
+    ClbEncryptionComponent,
+    ClbHistoryComponent,
+    ClbReplicasComponent,
+    ClbSSHComponent,
+    ClbApplicationsService,
+    ClbConfigService,
+    ClbEncryptionService,
+    ClbHistoryService,
+    ClbReplicasService,
+    ClbSSHService
 } from './';
 
 @NgModule({
     imports: [CoolybotRegistrySharedModule, CommonModule, RouterModule.forRoot(registryState, { useHash: true })],
     declarations: [
-        JhiApplicationsComponent,
-        JhiConfigComponent,
-        JhiEncryptionComponent,
-        JhiHistoryComponent,
-        JhiReplicasComponent,
-        JhiSSHComponent
+        ClbApplicationsComponent,
+        ClbConfigComponent,
+        ClbEncryptionComponent,
+        ClbHistoryComponent,
+        ClbReplicasComponent,
+        ClbSSHComponent
     ],
     entryComponents: [],
-    providers: [JhiApplicationsService, JhiConfigService, JhiEncryptionService, JhiHistoryService, JhiReplicasService, JhiSSHService],
+    providers: [ClbApplicationsService, ClbConfigService, ClbEncryptionService, ClbHistoryService, ClbReplicasService, ClbSSHService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CoolybotRegistryModule {}

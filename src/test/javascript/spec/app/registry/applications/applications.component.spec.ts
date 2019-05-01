@@ -2,34 +2,34 @@ import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angu
 import { Observable } from 'rxjs';
 
 import { CoolybotRegistryTestModule } from '../../../test.module';
-import { JhiApplicationsComponent, JhiApplicationsService } from '../../../../../../main/webapp/app/registry';
+import { ClbApplicationsComponent, ClbApplicationsService } from '../../../../../../main/webapp/app/registry';
 
 describe('Component Tests', () => {
     describe('ApplicationsComponent', () => {
-        let comp: JhiApplicationsComponent;
-        let fixture: ComponentFixture<JhiApplicationsComponent>;
+        let comp: ClbApplicationsComponent;
+        let fixture: ComponentFixture<ClbApplicationsComponent>;
 
         beforeEach(
             async(() => {
                 TestBed.configureTestingModule({
                     imports: [CoolybotRegistryTestModule],
-                    declarations: [JhiApplicationsComponent],
-                    providers: [JhiApplicationsService]
+                    declarations: [ClbApplicationsComponent],
+                    providers: [ClbApplicationsService]
                 })
-                    .overrideTemplate(JhiApplicationsComponent, '')
+                    .overrideTemplate(ClbApplicationsComponent, '')
                     .compileComponents();
             })
         );
 
         beforeEach(() => {
-            fixture = TestBed.createComponent(JhiApplicationsComponent);
+            fixture = TestBed.createComponent(ClbApplicationsComponent);
             comp = fixture.componentInstance;
         });
 
         it(
             'refresh data',
             fakeAsync(
-                inject([JhiApplicationsService], (service: JhiApplicationsService) => {
+                inject([ClbApplicationsService], (service: ClbApplicationsService) => {
                     const response = {
                         applications: [
                             {

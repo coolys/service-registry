@@ -8,7 +8,7 @@ import { StateStorageService } from 'app/shared';
     selector: 'clb-main',
     templateUrl: './main.component.html'
 })
-export class JhiMainComponent implements OnInit {
+export class ClbMainComponent implements OnInit {
     constructor(private titleService: Title, private router: Router, private $storageService: StateStorageService) {}
 
     private getPageTitle(routeSnapshot: ActivatedRouteSnapshot) {

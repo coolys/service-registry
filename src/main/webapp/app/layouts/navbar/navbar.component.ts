@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager } from 'ng-coolybot';
+import { ClbEventManager } from 'ng-coolybot';
 
 import { ProfileService } from 'app/layouts/profiles/profile.service';
 import { Principal, LoginModalService, LoginService } from 'app/shared';
@@ -25,7 +25,7 @@ export class NavbarComponent implements OnInit {
         private principal: Principal,
         private loginModalService: LoginModalService,
         private profileService: ProfileService,
-        private eventManager: JhiEventManager,
+        private eventManager: ClbEventManager,
         private router: Router
     ) {
         this.version = VERSION ? 'v' + VERSION : '';

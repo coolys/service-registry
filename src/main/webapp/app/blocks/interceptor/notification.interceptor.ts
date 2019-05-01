@@ -1,15 +1,15 @@
-import { JhiAlertService } from 'ng-coolybot';
+import { ClbAlertService } from 'ng-coolybot';
 import { HttpInterceptor, HttpRequest, HttpResponse, HttpHandler, HttpEvent } from '@angular/common/http';
 import { Injector } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 
 export class NotificationInterceptor implements HttpInterceptor {
-    private alertService: JhiAlertService;
+    private alertService: ClbAlertService;
 
     // tslint:disable-next-line: no-unused-variable
     constructor(private injector: Injector) {
-        setTimeout(() => (this.alertService = injector.get(JhiAlertService)));
+        setTimeout(() => (this.alertService = injector.get(ClbAlertService)));
     }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

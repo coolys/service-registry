@@ -1,10 +1,10 @@
-import { JhiEventManager } from 'ng-coolybot';
+import { ClbEventManager } from 'ng-coolybot';
 import { HttpInterceptor, HttpRequest, HttpErrorResponse, HttpHandler, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 
 export class ErrorHandlerInterceptor implements HttpInterceptor {
-    constructor(private eventManager: JhiEventManager) {}
+    constructor(private eventManager: ClbEventManager) {}
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         return next.handle(request).do(

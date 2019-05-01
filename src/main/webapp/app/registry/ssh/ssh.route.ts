@@ -1,9 +1,9 @@
 import { Route } from '@angular/router';
-import { JhiSSHComponent } from './ssh.component';
+import { ClbSSHComponent } from './ssh.component';
 
 export const sshRoute: Route = {
     path: 'ssh',
-    component: JhiSSHComponent,
+    component: ClbSSHComponent,
     data: {
         pageTitle: 'SSH public key'
     }

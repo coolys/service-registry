@@ -1,17 +1,17 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { JhiEncryptionService } from './encryption.service';
+import { ClbEncryptionService } from './encryption.service';
 
 @Component({
     selector: 'clb-encryption',
     templateUrl: './encryption.component.html'
 })
-export class JhiEncryptionComponent implements OnInit, OnDestroy {
+export class ClbEncryptionComponent implements OnInit, OnDestroy {
     showMore: boolean;
     textToEncrypt: string;
     encryptedText: string;
     result: string;
 
-    constructor(private encryptionService: JhiEncryptionService) {
+    constructor(private encryptionService: ClbEncryptionService) {
         this.showMore = true;
         this.textToEncrypt = '';
         this.encryptedText = '';

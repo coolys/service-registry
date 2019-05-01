@@ -1,20 +1,20 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { Observable } from 'rxjs/Rx';
-import { JhiRefreshService } from './refresh.service';
+import { ClbRefreshService } from './refresh.service';
 
 @Component({
     selector: 'clb-refresh-selector',
     templateUrl: './refresh-selector.component.html',
     styleUrls: ['refresh-selector.component.scss']
 })
-export class JhiRefreshSelectorComponent implements OnInit, OnDestroy {
+export class ClbRefreshSelectorComponent implements OnInit, OnDestroy {
     activeRefreshTime: number;
     refreshTimes: number[];
     refreshTimer: Subscription;
     refreshChangedSubscription: Subscription;
 
-    constructor(private refreshService: JhiRefreshService) {
+    constructor(private refreshService: ClbRefreshService) {
         this.refreshTimes = [0, 5, 10, 30, 60, 300];
         this.activeRefreshTime = this.refreshTimes[0];
     }

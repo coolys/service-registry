@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { JhiEventManager, JhiAlertService } from 'ng-coolybot';
+import { ClbEventManager, ClbAlertService } from 'ng-coolybot';
 import { Subscription } from 'rxjs/Rx';
 
 @Component({
@@ -13,11 +13,11 @@ import { Subscription } from 'rxjs/Rx';
             </div>
         </div>`
 })
-export class JhiAlertErrorComponent implements OnDestroy {
+export class ClbAlertErrorComponent implements OnDestroy {
     alerts: any[];
     cleanHttpErrorListener: Subscription;
 
-    constructor(private alertService: JhiAlertService, private eventManager: JhiEventManager) {
+    constructor(private alertService: ClbAlertService, private eventManager: ClbEventManager) {
         this.alerts = [];
 
         this.cleanHttpErrorListener = eventManager.subscribe('jHipsterRegistryApp.httpError', (response) => {

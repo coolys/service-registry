@@ -16,17 +16,17 @@ import {
     LoginOAuth2Service,
     Principal,
     HasAnyAuthorityDirective,
-    JhiLoginModalComponent,
-    JhiRoutesService,
-    JhiRefreshService
+    ClbLoginModalComponent,
+    ClbRoutesService,
+    ClbRefreshService
 } from './';
 
 @NgModule({
     imports: [CoolybotRegistrySharedLibsModule, CoolybotRegistrySharedCommonModule],
-    declarations: [JhiLoginModalComponent, HasAnyAuthorityDirective],
+    declarations: [ClbLoginModalComponent, HasAnyAuthorityDirective],
     providers: [
-        JhiRoutesService,
-        JhiRefreshService,
+        ClbRoutesService,
+        ClbRefreshService,
         AuthServerProvider,
         AuthSessionServerProvider,
         CookieService,
@@ -41,8 +41,8 @@ import {
         UserService,
         DatePipe
     ],
-    entryComponents: [JhiLoginModalComponent],
-    exports: [CoolybotRegistrySharedCommonModule, JhiLoginModalComponent, HasAnyAuthorityDirective, DatePipe],
+    entryComponents: [ClbLoginModalComponent],
+    exports: [CoolybotRegistrySharedCommonModule, ClbLoginModalComponent, HasAnyAuthorityDirective, DatePipe],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CoolybotRegistrySharedModule {}

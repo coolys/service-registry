@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
     selector: 'clb-docs',
     templateUrl: './docs.component.html'
 })
-export class JhiDocsComponent {
+export class ClbDocsComponent {
     constructor() {}
 }

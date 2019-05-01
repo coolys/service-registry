@@ -1,10 +1,10 @@
 import { Route } from '@angular/router';
 
-import { JhiConfigurationComponent } from './configuration.component';
+import { ClbConfigurationComponent } from './configuration.component';
 
 export const configurationRoute: Route = {
     path: 'clb-configuration',
-    component: JhiConfigurationComponent,
+    component: ClbConfigurationComponent,
     data: {
         pageTitle: 'Cloud configuration'
     }

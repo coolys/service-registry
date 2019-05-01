@@ -1,15 +1,15 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { JhiConfigService } from './config.service';
+import { ClbConfigService } from './config.service';
 import { ProfileService } from 'app/layouts/profiles/profile.service';
-import { JhiApplicationsService } from '../';
-import { JhiRefreshService } from 'app/shared/refresh/refresh.service';
+import { ClbApplicationsService } from '../';
+import { ClbRefreshService } from 'app/shared/refresh/refresh.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
     selector: 'clb-config',
     templateUrl: './config.component.html'
 })
-export class JhiConfigComponent implements OnInit, OnDestroy {
+export class ClbConfigComponent implements OnInit, OnDestroy {
     application: string;
     profile: string;
     label: string;
@@ -25,10 +25,10 @@ export class JhiConfigComponent implements OnInit, OnDestroy {
     refreshReloadSubscription: Subscription;
 
     constructor(
-        private configService: JhiConfigService,
+        private configService: ClbConfigService,
         private profileService: ProfileService,
-        private applicationsService: JhiApplicationsService,
-        private refreshService: JhiRefreshService
+        private applicationsService: ClbApplicationsService,
+        private refreshService: ClbRefreshService
     ) {
         this.application = 'application';
         this.profile = 'prod';

@@ -1,10 +1,10 @@
 import { Route } from '@angular/router';
 
-import { JhiApplicationsComponent } from './applications.component';
+import { ClbApplicationsComponent } from './applications.component';
 
 export const applicationsRoute: Route = {
     path: 'applications',
-    component: JhiApplicationsComponent,
+    component: ClbApplicationsComponent,
     data: {
         pageTitle: 'Applications'
     }

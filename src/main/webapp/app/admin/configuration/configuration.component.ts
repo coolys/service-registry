@@ -1,14 +1,14 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 
-import { JhiConfigurationService } from './configuration.service';
-import { JhiRoutesService, Route } from 'app/shared';
+import { ClbConfigurationService } from './configuration.service';
+import { ClbRoutesService, Route } from 'app/shared';
 
 @Component({
     selector: 'clb-configuration',
     templateUrl: './configuration.component.html'
 })
-export class JhiConfigurationComponent implements OnInit, OnDestroy {
+export class ClbConfigurationComponent implements OnInit, OnDestroy {
     allConfiguration: any = null;
     configuration: any = null;
     configKeys: any[];
@@ -20,7 +20,7 @@ export class JhiConfigurationComponent implements OnInit, OnDestroy {
     subscription: Subscription;
     updatingConfig: boolean;
 
-    constructor(private configurationService: JhiConfigurationService, private routesService: JhiRoutesService) {
+    constructor(private configurationService: ClbConfigurationService, private routesService: ClbRoutesService) {
         this.configKeys = [];
         this.filter = '';
         this.orderProp = 'prefix';

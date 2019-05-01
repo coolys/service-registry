@@ -6,34 +6,34 @@ import { CoolybotRegistrySharedModule } from 'app/shared';
 import {
     adminState,
     LogsComponent,
-    JhiMetricsMonitoringModalComponent,
-    JhiMetricsMonitoringComponent,
-    JhiHealthModalComponent,
-    JhiHealthCheckComponent,
-    JhiConfigurationComponent,
-    JhiDocsComponent,
-    JhiConfigurationService,
-    JhiLogfileComponent,
-    JhiHealthService,
-    JhiMetricsService,
+    ClbMetricsMonitoringModalComponent,
+    ClbMetricsMonitoringComponent,
+    ClbHealthModalComponent,
+    ClbHealthCheckComponent,
+    ClbConfigurationComponent,
+    ClbDocsComponent,
+    ClbConfigurationService,
+    ClbLogfileComponent,
+    ClbHealthService,
+    ClbMetricsService,
     LogsService,
-    JhiLogfileService
+    ClbLogfileService
 } from './';
 
 @NgModule({
     imports: [CoolybotRegistrySharedModule, RouterModule.forChild(adminState)],
     declarations: [
         LogsComponent,
-        JhiConfigurationComponent,
-        JhiDocsComponent,
-        JhiHealthCheckComponent,
-        JhiHealthModalComponent,
-        JhiMetricsMonitoringComponent,
-        JhiMetricsMonitoringModalComponent,
-        JhiLogfileComponent
+        ClbConfigurationComponent,
+        ClbDocsComponent,
+        ClbHealthCheckComponent,
+        ClbHealthModalComponent,
+        ClbMetricsMonitoringComponent,
+        ClbMetricsMonitoringModalComponent,
+        ClbLogfileComponent
     ],
-    entryComponents: [JhiHealthModalComponent, JhiMetricsMonitoringModalComponent],
-    providers: [JhiConfigurationService, JhiHealthService, JhiMetricsService, LogsService, JhiLogfileService],
+    entryComponents: [ClbHealthModalComponent, ClbMetricsMonitoringModalComponent],
+    providers: [ClbConfigurationService, ClbHealthService, ClbMetricsService, LogsService, ClbLogfileService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CoolybotRegistryAdminModule {}

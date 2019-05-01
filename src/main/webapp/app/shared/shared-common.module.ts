@@ -5,15 +5,15 @@ import { registerLocaleData } from '@angular/common';
 import locale from '@angular/common/locales/en';
 import {
     CoolybotRegistrySharedLibsModule,
-    JhiAlertComponent,
-    JhiAlertErrorComponent,
-    JhiRouteSelectorComponent,
-    JhiRefreshSelectorComponent
+    ClbAlertComponent,
+    ClbAlertErrorComponent,
+    ClbRouteSelectorComponent,
+    ClbRefreshSelectorComponent
 } from './';
 
 @NgModule({
     imports: [CoolybotRegistrySharedLibsModule],
-    declarations: [JhiAlertComponent, JhiAlertErrorComponent, JhiRouteSelectorComponent, JhiRefreshSelectorComponent, GroupByPipe],
+    declarations: [ClbAlertComponent, ClbAlertErrorComponent, ClbRouteSelectorComponent, ClbRefreshSelectorComponent, GroupByPipe],
     providers: [
         Title,
         {
@@ -23,10 +23,10 @@ import {
     ],
     exports: [
         CoolybotRegistrySharedLibsModule,
-        JhiAlertComponent,
-        JhiAlertErrorComponent,
-        JhiRouteSelectorComponent,
-        JhiRefreshSelectorComponent,
+        ClbAlertComponent,
+        ClbAlertErrorComponent,
+        ClbRouteSelectorComponent,
+        ClbRefreshSelectorComponent,
         GroupByPipe
     ]
 })

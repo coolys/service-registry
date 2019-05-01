@@ -1,10 +1,10 @@
 import { Route } from '@angular/router';
 
-import { JhiLogfileComponent } from './logfile.component';
+import { ClbLogfileComponent } from './logfile.component';
 
 export const logfileRoute: Route = {
     path: 'logs',
-    component: JhiLogfileComponent,
+    component: ClbLogfileComponent,
     data: {
         pageTitle: 'Logs'
     }

@@ -1,10 +1,10 @@
 import { Route } from '@angular/router';
 
-import { JhiMetricsMonitoringComponent } from './metrics.component';
+import { ClbMetricsMonitoringComponent } from './metrics.component';
 
 export const metricsRoute: Route = {
     path: 'clb-metrics',
-    component: JhiMetricsMonitoringComponent,
+    component: ClbMetricsMonitoringComponent,
     data: {
         pageTitle: 'Application Metrics'
     }

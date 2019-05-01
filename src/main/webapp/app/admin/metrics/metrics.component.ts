@@ -2,15 +2,15 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
-import { JhiMetricsMonitoringModalComponent } from './metrics-modal.component';
-import { JhiMetricsService } from './metrics.service';
-import { JhiRoutesService, Route } from 'app/shared';
+import { ClbMetricsMonitoringModalComponent } from './metrics-modal.component';
+import { ClbMetricsService } from './metrics.service';
+import { ClbRoutesService, Route } from 'app/shared';
 
 @Component({
     selector: 'clb-metrics',
     templateUrl: './metrics.component.html'
 })
-export class JhiMetricsMonitoringComponent implements OnInit, OnDestroy {
+export class ClbMetricsMonitoringComponent implements OnInit, OnDestroy {
     metrics: any = {};
     threadData: any = {};
     threadStats: {
@@ -26,7 +26,7 @@ export class JhiMetricsMonitoringComponent implements OnInit, OnDestroy {
     activeRoute: Route;
     subscription: Subscription;
 
-    constructor(private modalService: NgbModal, private metricsService: JhiMetricsService, private routesService: JhiRoutesService) {
+    constructor(private modalService: NgbModal, private metricsService: ClbMetricsService, private routesService: ClbRoutesService) {
         this.JCACHE_KEY = 'jcache.statistics';
     }
 
@@ -125,7 +125,7 @@ export class JhiMetricsMonitoringComponent implements OnInit, OnDestroy {
     }
 
     open() {
-        const modalRef = this.modalService.open(JhiMetricsMonitoringModalComponent, { size: 'lg' });
+        const modalRef = this.modalService.open(ClbMetricsMonitoringModalComponent, { size: 'lg' });
         modalRef.componentInstance.threadDump = this.threadData;
     }
 

@@ -5,7 +5,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
     selector: 'clb-metrics-modal',
     templateUrl: './metrics-modal.component.html'
 })
-export class JhiMetricsMonitoringModalComponent implements OnInit {
+export class ClbMetricsMonitoringModalComponent implements OnInit {
     threadDumpFilter: any;
     threadDump: any;
     threadDumpAll = 0;

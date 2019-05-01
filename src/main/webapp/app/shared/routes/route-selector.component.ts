@@ -1,16 +1,16 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
-import { JhiRoutesService } from './routes.service';
+import { ClbRoutesService } from './routes.service';
 import { Route } from './route.model';
 import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
-import { JhiRefreshService } from 'app/shared/refresh/refresh.service';
+import { ClbRefreshService } from 'app/shared/refresh/refresh.service';
 
 @Component({
     selector: 'clb-route-selector',
     templateUrl: './route-selector.component.html',
     styleUrls: ['route-selector.component.scss']
 })
-export class JhiRouteSelectorComponent implements OnInit, OnDestroy {
+export class ClbRouteSelectorComponent implements OnInit, OnDestroy {
     activeRoute: Route;
     routes: Route[];
     savedRoutes: Route[];
@@ -21,7 +21,7 @@ export class JhiRouteSelectorComponent implements OnInit, OnDestroy {
 
     refreshReloadSubscription: Subscription;
 
-    constructor(private routesService: JhiRoutesService, private refreshService: JhiRefreshService) {}
+    constructor(private routesService: ClbRoutesService, private refreshService: ClbRefreshService) {}
 
     ngOnInit() {
         this.activeRoute = this.routesService.getSelectedInstance();
